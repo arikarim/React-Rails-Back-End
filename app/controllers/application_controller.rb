@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::API
   respond_to :json
   before_action :process_token
-
-  protect_from_forgery with: :exception
+  
 
   private
 
