@@ -2,6 +2,8 @@ class ApplicationController < ActionController::API
   respond_to :json
   before_action :process_token
 
+  protect_from_forgery with: :exception
+
   private
 
   # Check for auth headers - if present, decode or send unauthorized response (called always to allow current_user)
