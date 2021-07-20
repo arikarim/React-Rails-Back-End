@@ -109,6 +109,9 @@ Devise.setup do |config|
     jwt.dispatch_requests = [
       ['DELETE', %r{^/sign_out$}],
       ['GET', %r{^/member$}],
+      jwt.revocation_requests = [
+            ['DELETE', %r{^/logout$}]
+          ]
     ]
   end
   # When false, Devise will not attempt to reload routes on eager load.
