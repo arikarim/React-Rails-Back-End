@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
-  devise_for :users,
-             controllers: {
-               sessions: 'users/sessions',
-               registrations: 'users/registrations'
-             }
-  get '/member-data', to: 'members#show'
+  devise_for :users, controllers: {
+    registrations: :registrations,
+    sessions: :sessions
+  }
+
+  root to: "home#index"
+  get '/member', to: 'members#show'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -14,18 +14,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'c88eba198b4bf023533d171359d3d4a7e63012a1e530a2fe0aa5f0c28823effdd89132c4036a0809095e3e7bfbda6dd61c0aa42320c374324bb429061b6c7c13'
+  # config.secret_key = 'e028ab61b48addc62742ce29a5e986a25061ba071519c8873b6d6cd29465a2e7837ecba9048604bf4f7ac6a4c6c59110e3c26f71d2751cb02415e8554bdbb87f'
 
-  # config.jwt do |jwt|
-  #   jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
-  #   jwt.dispatch_requests = [
-  #     ['POST', %r{^/login$}]
-  #   ]
-  #   jwt.revocation_requests = [
-  #     ['DELETE', %r{^/logout$}]
-  #   ]
-  #   jwt.expiration_time = 30.minutes.to_i
-  # end
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -114,7 +104,9 @@ Devise.setup do |config|
   # requests for sign in and sign up, you need to get a new CSRF token
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
-
+  config.jwt do |jwt|
+    jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
+  end
   # When false, Devise will not attempt to reload routes on eager load.
   # This can reduce the time taken to boot the app but if your application
   # requires the Devise mappings to be loaded during boot time the application
@@ -136,7 +128,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '4d4afec6601d06afefd3689a95d8223a1c1c583be33007ff403739627aef6b9e745b33d46c6b35aded6db2571555cf3b11093ea663ebae4d614c666576f7c71d'
+  # config.pepper = '8a3ed1666503918573edee5513e26ef98c32346c8c05ed51085a0f4c95832e9694828f67e498896c94b03126b0ed1cc5f63ca9b9f86d5960e96f92a8a5944f95'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -291,7 +283,7 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   # end
-  config.navigational_formats = []
+
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.
