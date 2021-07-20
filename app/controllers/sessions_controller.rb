@@ -8,6 +8,9 @@ class SessionsController < Devise::SessionsController
       # if current_user
       #   token = current_user.generate_jwt
       # end
+      
+      # token = encode(user_id: current_user.id)
+      # jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
       render json: {token: headers, message: 'You are logged in.', user: current_user }, status: :ok
     else
       login_failed
