@@ -106,6 +106,10 @@ Devise.setup do |config|
   # config.clean_up_csrf_token_on_authentication = true
   config.jwt do |jwt|
     jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
+    jwt.dispatch_requests = [
+      ['DELETE', %r{^/sign_out$}],
+      ['GET', %r{^/member$}],
+    ]
   end
   # When false, Devise will not attempt to reload routes on eager load.
   # This can reduce the time taken to boot the app but if your application
