@@ -107,8 +107,7 @@ Devise.setup do |config|
   config.jwt do |jwt|
     jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
     jwt.dispatch_requests = [
-      ['DELETE', %r{^/sign_out$}],
-      ['GET', %r{^/member$}],
+      ['POST', %r{^/login$}]
     ]
     jwt.revocation_requests = [
       ['DELETE', %r{^/logout$}]

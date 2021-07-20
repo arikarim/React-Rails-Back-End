@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::API
   respond_to :json
   include ActionController::MimeResponds
@@ -31,5 +33,4 @@ class ApplicationController < ActionController::API
   # def signed_in?
   #   @current_user_id.present?
   # end
-
 end

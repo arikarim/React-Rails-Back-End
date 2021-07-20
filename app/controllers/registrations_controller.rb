@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
 
@@ -11,10 +13,10 @@ class RegistrationsController < Devise::RegistrationsController
 
   def register_success
     token = current_user.generate_jwt
-    render json: {token: token, message: 'Signed up sucessfully.' }
+    render json: { token: token, message: 'Signed up sucessfully.' }
   end
 
   def register_failed
-    render json: { message: "Something went wrong." }
+    render json: { message: 'Something went wrong.' }
   end
 end
