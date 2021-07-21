@@ -7,13 +7,13 @@ require_relative 'config/environment'
 run Rails.application
 Rails.application.load_server
 
-require 'rack/cors'
-use Rack::Cors do
-  allow do
-    origins 'http://localhost:3000'
-      resource '*', headers: %w(Authorization),
-                    methods: :any,
-                    expose: %w(Authorization),
-                    credentials: true
-  end
-end
+# require 'rack/cors'
+# use Rack::Cors do
+#   allow do
+#     origins 'http://localhost:3000'
+#       resource '*', headers: %w(Authorization),
+#                     methods: :any,
+#                     expose: %w(Authorization),
+#                     credentials: true
+#   end
+# end

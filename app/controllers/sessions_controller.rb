@@ -21,7 +21,7 @@ class SessionsController < Devise::SessionsController
   end
 
   def login_failed
-    render json: { message: 'Something went wrong.', status: :unprocessable_entity }, status: :unprocessable_entity
+    render json: { message: 'Something went wrong.' }, status: :unauthorized
   end
 
   def respond_to_on_destroy
