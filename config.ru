@@ -11,7 +11,7 @@ require 'rack/cors'
 use Rack::Cors do
   allow do
     origins 'http://localhost:3000'
-    resource '*', headers: %w[Authorization],
+    resource '*', headers: :any,
                   methods: %i[get post delete put options],
                   expose: %w[Authorization],
                   credentials: true
