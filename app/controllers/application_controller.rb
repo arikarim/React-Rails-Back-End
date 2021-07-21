@@ -2,7 +2,7 @@
 
 class ApplicationController < ActionController::API
   respond_to :json
-  include ActionController::MimeResponds
+
   # before_action :process_token
 
   # private

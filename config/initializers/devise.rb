@@ -107,10 +107,10 @@ Devise.setup do |config|
   config.jwt do |jwt|
     jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
     jwt.dispatch_requests = [
-      ['POST', %r{^/login$}]
+      ['POST', %r{^/api/v1/login([.]json)?$}]
     ]
     jwt.revocation_requests = [
-      ['DELETE', %r{^/logout$}]
+      ['POST', %r{^/api/v1/logout([.]json)?$}]
     ]
   end
   # When false, Devise will not attempt to reload routes on eager load.

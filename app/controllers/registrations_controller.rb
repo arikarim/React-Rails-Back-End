@@ -12,8 +12,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def register_success
-    token = current_user.generate_jwt
-    render json: { token: token, message: 'Signed up sucessfully.' }
+    render json: { user: current_user, message: 'Signed up sucessfully.' }
   end
 
   def register_failed

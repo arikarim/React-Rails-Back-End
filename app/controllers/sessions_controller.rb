@@ -3,7 +3,9 @@
 class SessionsController < Devise::SessionsController
   respond_to :json
 
+
   private
+
 
   def respond_with(resource, _opts = {})
     if resource.persisted?
@@ -11,7 +13,8 @@ class SessionsController < Devise::SessionsController
       #   token = current_user.generate_jwt
       # end
 
-      render json: { token: headers, message: 'You are logged in.', user: current_user }, status: :ok
+      h = request.headers['Authorization']
+      render json: { token: h, message: 'You are logged in.', user: current_user }, status: :ok
     else
       login_failed
     end
