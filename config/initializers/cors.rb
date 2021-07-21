@@ -11,7 +11,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: true do
   allow do
     origins 'http://localhost:3000'
 
-    resource '*', headers: %w(Authorization),
+    resource '*', headers: :any,
                   methods: :any,
                   expose: %w(Authorization),
                   credentials: true
