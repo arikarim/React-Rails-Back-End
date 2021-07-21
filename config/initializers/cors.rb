@@ -7,14 +7,14 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-# Rails.application.config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
-#   allow do
-#     origins 'http://localhost:3000'
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'http://localhost:3000'
 
-#     resource '*', headers: %w(Authorization),
-#                   methods: :any,
-#                   expose: %w(Authorization),
-#                   credentials: true
-#   end
-# end
+    resource '*', headers: %w(Authorization),
+                  methods: :any,
+                  expose: %w(Authorization),
+                  credentials: true
+  end
+end
 
