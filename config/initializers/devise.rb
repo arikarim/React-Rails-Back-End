@@ -107,7 +107,8 @@ Devise.setup do |config|
   config.jwt do |jwt|
     jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
     jwt.dispatch_requests = [
-      ['POST', %r{^/api/v1/login([.]json)?$}]
+      ['POST', %r{^/api/v1/login([.]json)?$}],
+      ['GET', %r{^/member([.]json)?$}]
     ]
     jwt.revocation_requests = [
       ['POST', %r{^/api/v1/logout([.]json)?$}]
