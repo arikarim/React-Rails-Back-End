@@ -7,12 +7,12 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-# Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: true do
-#   allow do
-#     origins '*'
+Rails.application.config.middleware.insert_before Rack::Sendfile, Rack::Cors, debug: true do
+  allow do
+    origins '*'
 
-#     resource '*', headers: %w(Authorization),
-#                   methods: :any,
-#                   expose: %w[Authorization]
-#   end
-# end
+    resource '*', headers: %w(Authorization),
+                  methods: :any,
+                  expose: %w[Authorization]
+  end
+end
