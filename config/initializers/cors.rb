@@ -7,7 +7,7 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-Rails.application.config.middleware.insert_before Rack::Sendfile, Rack::Cors, debug: true do
+Rails.application.config.middleware.insert_before ActionDispatch::Executor, Rack::Cors, debug: true do
   allow do
     origins '*'
 
