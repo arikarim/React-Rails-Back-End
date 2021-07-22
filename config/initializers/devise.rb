@@ -105,7 +105,7 @@ Devise.setup do |config|
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
   config.jwt do |jwt|
-    jwt.secret = Rails.application.credentials.dig(:devise, :jwt_secret_key)
+    jwt.secret = Rails.application.credentials.jwt_secret_key
     jwt.dispatch_requests = [
       ['POST', %r{^/users/sign_in$}],
       ['GET', %r{^/member$}]
