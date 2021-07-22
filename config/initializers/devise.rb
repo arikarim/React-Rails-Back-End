@@ -105,7 +105,8 @@ Devise.setup do |config|
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
   config.jwt do |jwt|
-    jwt.secret = '13ce38e4e1feb43531b8ade47098da572fe2eb96b7a641043d964871b719b4098d96dd326e4bfa0949a9a508c84ba19c857fee8ae01bf0343a43df7ef3601c98'
+    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+
     jwt.dispatch_requests = [
       ['POST', %r{^/users/sign_in$}],
       ['GET', %r{^/member$}]
