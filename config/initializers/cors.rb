@@ -14,6 +14,6 @@ Rails.application.config.middleware.insert_before ActionDispatch::HostAuthorizat
     resource '*', headers: :any,
                   methods: :any,
                   expose: %w[Authorization],
-                  credentials: false
+                  credentials: true
   end
 end
