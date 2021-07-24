@@ -19,7 +19,7 @@ This is prepared Rails authentication template, part of `React-Rails authenticat
 
 ## Built With
 
-- Rails
+- Rails-Api
 
 - Devise
  
