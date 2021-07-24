@@ -14,8 +14,9 @@ This is prepared Rails authentication template, part of `React-Rails authenticat
 ![image](./app/images.screen.png)
 
 
+Note: This is a demo of this project combined with [React-front](https://github.com/arikarim/Rails-React-Front-end).
 
-[Live Demo Link](https://60d9c0abccc45700086d7eec--epic-kilby-a23fc8.netlify.app/)
+[Live Demo Link](http://arikarim.me/Rails-React-Front-end/)
 
 ## Built With
 
