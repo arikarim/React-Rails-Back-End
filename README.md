@@ -17,6 +17,26 @@ Note: This is a demo of this project combined with [React-front](https://github.
 
 [Live Demo Link](http://arikarim.me/Rails-React-Front-end/)
 
+
+## End points:
+**https://afternoon-coast-71095.herokuapp.com/users/sign_in:**
+- Rooute ==> Sign in
+- Method ==> POST
+- Body ==> `{ "user": { "email": "test@example.com", "password": "12345678" } }`
+- Response token ==> data.headers.authorization
+
+**https://afternoon-coast-71095.herokuapp.com/users:**
+- Rooute ==> Sign up
+- Method ==> POST
+- Body ==> `{ "user": { "email": "test@example.com", "password": "12345678" } }`
+- Response token ==> data.headers.authorization
+
+**https://afternoon-coast-71095.herokuapp.com/member:**
+- Rooute ==> To know if user logged in?
+- Method ==> GET
+- headers ==> `token: token you saved from log in or sign up user`
+- Response ==> data.data.message=> 'yeppa you did it'
+
 ## Built With
 
 - Rails-Api
