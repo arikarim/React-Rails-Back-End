@@ -27,7 +27,8 @@ Note: This is a demo of this project combined with [React-front](https://github.
 
 ## Prerequisities
 
-node should be installed in your machine.
+- Ruby 3
+- Rails 6
 
 
 ## Getting Started
