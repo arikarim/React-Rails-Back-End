@@ -1,7 +1,7 @@
 # React-Rails Authentication Front-End
 <p align="center">
     <img src="./app/images/rails.png" alt="Logo" width="150" height="120">
-  <h3 align="center">React-Rails --> [React]</h3>
+  <h3 align="center">React-Rails --> [Rails]</h3>
 
   <p align="center">
 This is prepared Rails authentication template, part of `React-Rails authentication`, Rails back-end and  logic are built and ready to use.
