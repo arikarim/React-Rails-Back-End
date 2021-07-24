@@ -11,7 +11,7 @@ This is prepared Rails authentication template, part of `React-Rails authenticat
 
 ## Screenshots of the app.
 
-![image](./app/images.screeen.png)
+![image](./app/images/.screeen.png)
 
 
 Note: This is a demo of this project combined with [React-front](https://github.com/arikarim/Rails-React-Front-end).
