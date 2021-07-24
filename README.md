@@ -19,23 +19,29 @@ Note: This is a demo of this project combined with [React-front](https://github.
 
 
 ## End points:
-**http//localhost:3000/users/sign_in:**
+**http//localhost:3000/users/sign_in**
 - Rooute ==> Sign in
 - Method ==> POST
 - Body ==> `{ "user": { "email": "test@example.com", "password": "12345678" } }`
 - Response token ==> data.headers.authorization
 
-**http//localhost:3000/users:**
+**http//localhost:3000/users**
 - Rooute ==> Sign up
 - Method ==> POST
 - Body ==> `{ "user": { "email": "test@example.com", "password": "12345678" } }`
 - Response token ==> data.headers.authorization
 
-**http//localhost:3000/member:**
+**http//localhost:3000/member**
 - Rooute ==> To know if user logged in?
 - Method ==> GET
 - headers ==> `token: token you saved from log in or sign up user`
-- Response ==> data.data.message=> 'yeppa you did it'
+- Response ==> data.data.message=> 'yeppa you did it.'
+
+**http//localhost:3000/users/sign_out**
+- Rooute ==> To know if user logged in?
+- Method ==> DELETE
+- headers ==> `token: token you saved from log in or sign up user`
+- Response ==> data.data.message=> 'You are logged out.'
 
 ## Built With
 
