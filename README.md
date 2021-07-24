@@ -19,19 +19,19 @@ Note: This is a demo of this project combined with [React-front](https://github.
 
 
 ## End points:
-**https://afternoon-coast-71095.herokuapp.com/users/sign_in:**
+**http//localhost:3000/users/sign_in:**
 - Rooute ==> Sign in
 - Method ==> POST
 - Body ==> `{ "user": { "email": "test@example.com", "password": "12345678" } }`
 - Response token ==> data.headers.authorization
 
-**https://afternoon-coast-71095.herokuapp.com/users:**
+**http//localhost:3000/users:**
 - Rooute ==> Sign up
 - Method ==> POST
 - Body ==> `{ "user": { "email": "test@example.com", "password": "12345678" } }`
 - Response token ==> data.headers.authorization
 
-**https://afternoon-coast-71095.herokuapp.com/member:**
+**http//localhost:3000/member:**
 - Rooute ==> To know if user logged in?
 - Method ==> GET
 - headers ==> `token: token you saved from log in or sign up user`
