@@ -40,7 +40,7 @@ Note: This is a demo of this project combined with [React-front](https://github.
 - Response ==> data.data.message=> 'yeppa you did it.'
 
 **http//localhost:3000/users/sign_out**
-- Route ==> To know if user logged in?
+- Route ==> To log out
 - Method ==> DELETE
 - headers ==> `token: token you saved from log in or sign up user`
 - Response ==> data.data.message=> 'You are logged out.'
