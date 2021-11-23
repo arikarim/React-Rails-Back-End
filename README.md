@@ -9,8 +9,6 @@ This is prepared Rails authentication template, part of `React-Rails authenticat
 </p
 
 
-
-
 ## Screenshots of the app.
 ![image](./app/images/s.png)
 
